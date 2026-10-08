@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warehouse WMS Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">W</div>
+        <div>
+          <div class="brand-title">WAREHOUSE</div>
+          <div class="brand-sub">WMS SYSTEM</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-item active" data-page="dashboard">🏠 <span>Dashboard</span></button>
+
+        <div class="menu-group">
+          <button class="menu-item" data-page="operations">⚙️ <span>Operations</span><span class="chevron">›</span></button>
+          <div class="submenu">
+            <button data-page="inbound">Inbound</button>
+            <button data-page="outbound">Outbound</button>
+          </div>
+        </div>
+
+        <div class="menu-group">
+          <button class="menu-item" data-page="master">📋 <span>Master Data</span><span class="chevron">›</span></button>
+          <div class="submenu">
+            <button data-page="items">Item Master</button>
+            <button data-page="suppliers">Supplier</button>
+            <button data-page="locations">Location</button>
+          </div>
+        </div>
+
+        <div class="menu-group">
+          <button class="menu-item" data-page="inventory">📦 <span>Inventory</span><span class="chevron">›</span></button>
+          <div class="submenu">
+            <button data-page="stock">Stock On-hand</button>
+            <button data-page="lots">Lot / Batch</button>
+            <button data-page="reorder">Reorder Point</button>
+            <button data-page="fifo">FIFO / FEFO</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-dot"></div>
+        <div>
+          <strong>System Online</strong>
+          <small>Local browser storage</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="page-kicker">WAREHOUSE MANAGEMENT SYSTEM</div>
+          <h1 id="pageTitle">Dashboard</h1>
+        </div>
+        <div class="top-actions">
+          <div class="date-box" id="today"></div>
+          <button class="icon-btn" id="resetBtn" title="Reset demo data">↻</button>
+        </div>
+      </header>
+
+      <section id="app"></section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
